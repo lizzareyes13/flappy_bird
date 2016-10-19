@@ -1,7 +1,6 @@
 {
   "name": "flappy_bird",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,18 +15,31 @@
     "browserify": "^13.1.0",
     "watchify": "^3.7.0"
   },
-
   "browserify": {
     "transform": [
       [
         "babelify",
         {
           "presets": [
-            "react",
             "es2015"
           ]
         }
       ]
     ]
-  }
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "watchify": "^3.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizzareyes13/flappy_bird.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lizzareyes13/flappy_bird/issues"
+  },
+  "homepage": "https://github.com/lizzareyes13/flappy_bird#readme",
+  "description": ""
 }

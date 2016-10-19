@@ -1,15 +1,19 @@
-function Scene() {
+function Scene(mw) {
   this.bg = document.getElementById("bg");
   this.xOffset = 0;
+  this.maxWidth = mw;
 }
 
-scene.prototype.update = function(){
+Scene.prototype.update = function(){
+  if(this.xOffSet <= -450)
+    this.xOffset = 0;
   this.xOffset--;
 
 };
 
-scene.prototype.render = function(ctx){
-  ctx.drawImage(this.bg, this.xOffset, 0, 400, 600);
+Scene.prototype.render = function(ctx){
+  for(var i=0; i<=this.maxWidth+450; i+=449)
+  ctx.drawImage(this.bg, i+this.xOffset, 0, 450, 600);
 }
 
-export default New Scene();
+export default new Scene(1000);
