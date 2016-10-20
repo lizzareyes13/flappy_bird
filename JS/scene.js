@@ -5,15 +5,15 @@ function Scene(mw) {
 }
 
 Scene.prototype.update = function(){
-  if(this.xOffSet <= -450)
+  if(this.xOffset <= -450)
     this.xOffset = 0;
   this.xOffset--;
-
 };
 
 Scene.prototype.render = function(ctx){
-  for(var i=0; i<=this.maxWidth+450; i+=449)
-  ctx.drawImage(this.bg, i+this.xOffset, 0, 450, 600);
+  for(var i=0; i-450<=this.maxWidth; i+=449){
+    ctx.drawImage(this.bg, i+this.xOffset, 0, 450, 600);
+  }
 }
 
 export default new Scene(1000);

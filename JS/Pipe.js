@@ -11,10 +11,16 @@ Pipe.prototype.update = function(){
 }
 
 Pipe.prototype.render = function(ctx){
-   ctx.save();
-   ctx.fillStyle = "#00E800";
-   ctx.fillRect(this.x, this.y, this.width, this.height);
-   ctx.restore();
+  if(this.y){
+  ctx.drawImage(document.getElementById("pipe1"),this.x, this.y, this.width, this.height);
+  }
+  else{
+    ctx.drawImage(document.getElementById("pipe2"),this.x, this.y, this.width, this.height);
+  }
+  //  ctx.save();
+  //  ctx.fillStyle = "#936dbc";
+  //  ctx.fillRect(this.x, this.y, this.width, this.height);
+  //  ctx.restore();
 }
 
 export default Pipe;
